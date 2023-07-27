@@ -3,6 +3,7 @@ import { JobCards } from "@/components/JobCards";
 import TabLayout from "@/layouts/Tab";
 import { Book, Colorfilter, Instagram, PenTool } from "iconsax-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -34,8 +35,14 @@ export default function Home() {
           <JobCards />
           <JobCards />
           <JobCards />
-          <JobCards />
         </div>
+
+        <Link
+          href={"/client/new-chat"}
+          className="text-xs underline text-white-200 hover:text-white ease-in-out duration-300"
+        >
+          Ver mais
+        </Link>
 
         <div className="flex flex-col items-start w-full gap-2">
           <div className="flex flex-row gap-2">

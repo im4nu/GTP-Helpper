@@ -27,12 +27,12 @@ const previousChat = [
 
 export default function Sidebar({ title }: SidebarProps) {
   return (
-    <div className="flex flex-col h-screen w-[260px] bg-[#0E131F] items-start pl-[20px] py-8 text-white gap-8">
+    <div className="flex flex-col min-h-screen w-[260px] bg-[#0E131F] items-start pl-[20px] py-8 text-white gap-8">
       <h5 className="text-3xl">Início</h5>
 
       <div className="flex flex-col gap-4">
         <p>Iniciar novo chat</p>
-        <Link href={"/client/jobs"}>
+        <Link href={"/client/new-chat"}>
           <Add size="25" />
           Novo chat
         </Link>

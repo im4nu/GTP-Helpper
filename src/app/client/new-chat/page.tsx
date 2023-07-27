@@ -10,7 +10,7 @@ export default function Jobs() {
           <h1 className="text-2xl">Perfil do usuário</h1>
         </div>
 
-        <div className="flex flex-row flex-wrap justify-around gap-2 h-[calc(100vh-300px)] items-center">
+        <div className="flex flex-row flex-wrap justify-around gap-2 h-[calc(100vh-200px)] items-center py-4">
           <JobCards />
           <JobCards />
           <JobCards />
