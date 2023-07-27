@@ -1,12 +1,7 @@
 import { SmsNotification } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const userData = {
-  name: "Emmanuel Rodrigues",
-  email: "meuemail@gmail.com",
-  image: "/avatars/man-in-purple.png",
-};
+import { userData } from "../../utils/user";
 
 export default function Header() {
   return (

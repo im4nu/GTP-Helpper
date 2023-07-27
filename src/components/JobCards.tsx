@@ -4,8 +4,8 @@ import Link from "next/link";
 export function JobCards() {
   return (
     <Link
-      href={"#"}
-      className="flex flex-col items-center justify-center w-full h-[135px] gap-2 max-w-[250px] hover:opacity-80 duration-300 ease-in-out"
+      href={"/client/jobs/category"}
+      className="flex flex-col items-center justify-center w-full h-fit gap-2 max-w-[250px] hover:opacity-80 duration-300 ease-in-out"
     >
       <div className="flex flex-row w-full items-start gap-2">
         <Book size="25" color="#FF8A65" />

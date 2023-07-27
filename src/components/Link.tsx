@@ -1,7 +1,8 @@
-import React, { forwardRef } from "react";
+import { type ComponentProps } from "react";
+import NextLink from "next/link";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const button = cva("rounded-xl font-semibold", {
+const link = cva("link", {
   variants: {
     variant: {
       contained: [
@@ -58,29 +59,15 @@ const button = cva("rounded-xl font-semibold", {
       medium: ["text-sm"],
     },
   },
+  compoundVariants: [{ variant: "contained", size: "medium" }],
   defaultVariants: {
     variant: "contained",
     size: "medium",
   },
 });
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof button> & {
-    loading?: boolean;
-  };
+export type Props = VariantProps<typeof link> & ComponentProps<typeof NextLink>;
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, loading = false, children, ...props }, ref) => (
-    <button
-      ref={ref}
-      className={button({ variant, size, className })}
-      {...props}
-    >
-      {loading ? "Carregando..." : children}
-    </button>
-  )
-);
-
-Button.displayName = "Button";
-
-export { Button };
+export function Link({ className, variant, size, ...props }: Props) {
+  return <NextLink className={link({ variant, size, className })} {...props} />;
+}

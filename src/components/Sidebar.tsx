@@ -1,7 +1,6 @@
 import { Add, Box, Clock } from "iconsax-react";
-import { Button } from "./Button";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "./Link";
 
 interface SidebarProps {
   title?: string;
@@ -33,22 +32,22 @@ export default function Sidebar({ title }: SidebarProps) {
 
       <div className="flex flex-col gap-4">
         <p>Iniciar novo chat</p>
-        <Button>
+        <Link href={"/client/jobs"}>
           <Add size="25" />
           Novo chat
-        </Button>
+        </Link>
 
         <p>Histórico de chat</p>
-        <Button>
+        <Link href={"/"}>
           <Clock size="25" />
           Histórico
-        </Button>
+        </Link>
 
         <p>Planos de assinatura</p>
-        <Button>
+        <Link href={"/"}>
           <Box size="25" />
           Planos
-        </Button>
+        </Link>
       </div>
 
       <div className="flex flex-col items-start gap-4">
@@ -61,21 +60,15 @@ export default function Sidebar({ title }: SidebarProps) {
           >
             <div className="flex w-[5px] rounded-sm h-[35px] bg-main stroke-shadow" />
 
-            <Link
-              href="#"
-              className="flex text-xs p-4 w-[225px] bg-[#262A35] rounded-xl ease-in-out duration-300 hover:opacity-80"
-            >
+            <button className="flex text-xs p-4 w-[225px] bg-[#262A35] rounded-xl ease-in-out duration-300 hover:opacity-80">
               {item.title}
-            </Link>
+            </button>
           </div>
         ))}
 
-        <Link
-          href="#"
-          className="underline text-center w-full text-xs text-[#ffffffd3] ease-in-out duration-300 hover:text-white"
-        >
+        <button className="underline text-center w-full text-xs text-[#ffffffd3] ease-in-out duration-300 hover:text-white">
           Ver mais...
-        </Link>
+        </button>
       </div>
 
       <div className="hidden flex-col items-center gap-2 w-full pr-[20px] 2xl:flex">
