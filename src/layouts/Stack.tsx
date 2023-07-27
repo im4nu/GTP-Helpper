@@ -1,4 +1,3 @@
-import Sidebar from "@/components/Sidebar";
 import { ArrowLeft2, SmsNotification } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,16 +15,19 @@ const userData = {
 
 export default function StackLayout({ children }: StackLayoutProps) {
   return (
-    <main className="flex min-h-screen min-w-screen flex-col justify-start">
-      <div className="flex w-full justify-end items-end">
+    <main className="flex min-h-screen min-w-screen flex-col items-center justify-start lg:px-[2.5vw] xl:px-[5vw] 2xl:px-[10vw]">
+      <div className="flex w-full justify-between items-center">
         <Link
-          href={"#"}
-          className="flex rounded-full bg-white items-center text-main"
+          href={"/"}
+          className="flex rounded-full bg-white items-center text-main p-3"
         >
-          <ArrowLeft2 />
+          <ArrowLeft2 size={"24"} />
         </Link>
 
-        <Link href={"#"} className="flex flex-row w-fit gap-4 items-center p-4">
+        <Link
+          href={"/client/profile"}
+          className="flex flex-row w-fit gap-4 items-center p-4"
+        >
           <div className="flex flex-col gap-1">
             <p className="font-bold">{userData.name}</p>
 

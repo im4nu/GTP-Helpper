@@ -11,7 +11,10 @@ const userData = {
 export default function Header() {
   return (
     <div className="flex w-full justify-end items-end">
-      <Link href={"#"} className="flex flex-row w-fit gap-4 items-center p-4">
+      <Link
+        href={"/client/profile"}
+        className="flex flex-row w-fit gap-4 items-center p-4"
+      >
         <div className="flex flex-col gap-1">
           <p className="font-bold">{userData.name}</p>
 

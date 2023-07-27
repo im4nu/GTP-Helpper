@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <TabLayout>
-      <div className="flex flex-col w-[calc(100vw-260px)] h-full items-center justify-evenly lg:px-[2.5vw] xl:px-[5vw] 2xl:px-[10vw]">
+      <div className="flex flex-col w-full h-full items-center justify-evenly">
         <div className="flex flex-col items-center justify-center gap-4">
           <Image
             src={"/img/logo.png"}
