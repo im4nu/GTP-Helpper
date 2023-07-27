@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import { ReactNode } from "react";
 
@@ -10,7 +11,10 @@ export default function TabLayout({ children }: TabLayoutProps) {
     <main className="flex min-h-screen min-w-screen flex-row justify-between">
       <Sidebar />
 
-      {children}
+      <div className="flex flex-col w-[calc(100vw-260px)] h-screen bg-dark bg-circles bg-no-repeat bg-cover text-white">
+        <Header />
+        {children}
+      </div>
     </main>
   );
 }
