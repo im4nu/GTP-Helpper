@@ -10,9 +10,7 @@ export default function TabLayout({ children }: TabLayoutProps) {
     <main className="flex min-h-screen min-w-screen flex-row justify-between">
       <Sidebar />
 
-      <div className="flex w-[calc(100vw - 260px)] h-screen bg-dark">
-        {children}
-      </div>
+      {children}
     </main>
   );
 }
