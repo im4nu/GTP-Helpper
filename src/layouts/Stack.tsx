@@ -1,6 +1,9 @@
+"use client";
+
 import { ArrowLeft2, SmsNotification } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ReactNode } from "react";
 
 interface StackLayoutProps {
@@ -20,15 +23,16 @@ export default function StackLayout({
   routeName,
   titleScreen,
 }: StackLayoutProps) {
+  const { back } = useRouter();
   return (
     <main className="flex min-h-screen h-full w-screen flex-col items-center justify-start lg:px-[5vw] xl:px-[10vw] 2xl:px-[15vw]">
       <div className="flex w-full justify-between items-center">
-        <Link
-          href={"/"}
+        <button
+          onClick={() => back()}
           className="flex rounded-full bg-white items-center text-main p-3"
         >
           <ArrowLeft2 size={"24"} />
-        </Link>
+        </button>
 
         <Link
           href={"/client/profile"}

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { userData } from "../../../../utils/user";
 import Link from "next/link";
 import { LogoutCurve } from "iconsax-react";
+import { useRouter } from "next/navigation";
 
 export default function Profile() {
   const [firstTime, setFirstTime] = useState(true);
@@ -23,6 +24,8 @@ export default function Profile() {
       setFirstTime(JSON.parse(storedFirstTime));
     }
   }, [firstTime]);
+
+  const { push } = useRouter();
 
   return (
     <StackLayout routeName="Perfil do Usuário" titleScreen="Perfil do Usuário">
@@ -94,9 +97,12 @@ export default function Profile() {
                 créditos disponíveis
               </p>
 
-              <Link variant={"containedGreen"} href={"/"}>
+              <Button
+                variant={"containedGreen"}
+                onClick={() => push("/client/plans")}
+              >
                 Adquirir mais créditos
-              </Link>
+              </Button>
             </div>
           </div>
 
@@ -113,7 +119,7 @@ export default function Profile() {
 
             <Link
               href={"/auth/login"}
-              className="flex flex-row items-center gap-2"
+              className="flex flex-row-reverse items-center gap-2"
             >
               <LogoutCurve size="32" />
               <p className="text-xs underline">Sair da sua conta</p>
