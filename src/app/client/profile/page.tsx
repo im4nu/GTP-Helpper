@@ -3,12 +3,25 @@
 import { Button } from "@/components/Button";
 import StackLayout from "@/layouts/Stack";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { userData } from "../../../../utils/user";
 import { Link } from "@/components/Link";
 
 export default function Profile() {
   const [firstTime, setFirstTime] = useState(true);
+
+  useEffect(() => {
+    if (firstTime === false) {
+      localStorage.setItem("firstTime", JSON.stringify(firstTime));
+    }
+  }, [firstTime]);
+
+  useEffect(() => {
+    const storedFirstTime = localStorage.getItem("firstTime");
+    if (storedFirstTime !== null) {
+      setFirstTime(JSON.parse(storedFirstTime));
+    }
+  }, [firstTime]);
 
   return (
     <StackLayout routeName="Perfil do Usuário" titleScreen="Perfil do Usuário">
@@ -35,8 +48,8 @@ export default function Profile() {
           </div>
         </>
       ) : (
-        <div className="flex flex-row w-full items-center h-[calc(100vh-300px)]">
-          <div className="flex flex-col items-start w-1/2 gap-4">
+        <div className="flex flex-row w-full items-center h-[calc(100vh-180px)] justify-around">
+          <div className="flex flex-col items-start w-1/3 gap-4">
             <Image
               src={userData.image}
               width={150}
@@ -63,7 +76,7 @@ export default function Profile() {
             <Button>Editar dados</Button>
           </div>
 
-          <div className="flex flex-col items-center w-1/2 gap-4">
+          <div className="flex flex-col items-center w-1/3 gap-4">
             <p className="text-2xl">Meus Créditos</p>
             <Image
               src={"/img/credits.png"}
