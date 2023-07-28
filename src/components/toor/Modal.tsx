@@ -1,8 +1,7 @@
 "use client";
 
-import { ArrowRight2 } from "iconsax-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const toor = [
   {
@@ -37,9 +36,24 @@ const toor = [
 export function ModalToor() {
   const [toorStep, setToorStep] = useState(0);
 
+  // UseEffect para salvar o valor no localStorage sempre que ele for atualizado
+  useEffect(() => {
+    if (toorStep > 2) {
+      localStorage.setItem("toorStep", JSON.stringify(toorStep));
+    }
+  }, [toorStep]);
+
+  // UseEffect para recuperar o valor do localStorage quando o componente for montado
+  useEffect(() => {
+    const storedToorStep = localStorage.getItem("toorStep");
+    if (storedToorStep !== null) {
+      setToorStep(JSON.parse(storedToorStep));
+    }
+  }, []);
+
   function handleNextStep() {
     if (toorStep <= 2) {
-      setToorStep(toorStep + 1);
+      setToorStep((prevStep) => prevStep + 1);
     }
   }
 
