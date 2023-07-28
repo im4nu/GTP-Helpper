@@ -58,9 +58,9 @@ export default function Plans() {
               ))}
             </div>
 
-            <Button className="text-white">Assinar</Button>
-
             <CountdownTimer />
+
+            <Button className="text-white">Assinar</Button>
           </div>
         </div>
 
