@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@/components/Button";
-import { Input } from "@/components/Input";
+import { Input } from "@/components/auth/Input";
+import { AuthDialog } from "@/components/auth/Dialog";
 import {
   Eye,
   EyeSlash,
@@ -69,6 +70,20 @@ export default function Register() {
           Cadastrar
         </Button>
       </div>
+
+      <AuthDialog
+        title={
+          <h2 className="text-lg">
+            Já possui {""}
+            <span className="text-main font-bold">cadastro?</span>
+          </h2>
+        }
+        description={
+          <p className="text-gray text-xs font-semibold">Entre agora!</p>
+        }
+        buttonText="Entrar"
+        link="/auth/login"
+      />
     </div>
   );
 }

@@ -10,6 +10,7 @@ module.exports = {
         'white-200': '#ffffffd3',
         main: '#522987',
         accent: '#6376A4',
+        gray: '#676767,'
       },
       backgroundImage: {
         'circles': "url('/svg/bg.svg')",

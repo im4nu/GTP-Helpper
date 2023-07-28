@@ -26,10 +26,6 @@ input:focus {
   background: linear-gradient(180deg, #602DA2 0%, #6376A4 100%);
 }
 
-.gradient-border{
-  border: solid 1px linear-gradient(180deg, #602DA2 0%, #6376A4 100%);
-}
-
 .gradient-btn-green{
   border-radius: 12px;
   background: linear-gradient(180deg, #2DA263 0%, #6376A4 100%);

@@ -52,6 +52,7 @@ export default function StackLayout({
           />
         </Link>
       </div>
+
       <div className="flex flex-col items-center w-full justify-center h-full">
         <div className="flex flex-col items-start w-full mt-4">
           <p className="text-xs text-white-200">
