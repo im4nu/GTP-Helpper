@@ -1,6 +1,6 @@
 import { ProfessionCard } from "@/components/ProfessionCard";
 import TabLayout from "@/layouts/Tab";
-import { Book, Colorfilter, Instagram, PenTool } from "iconsax-react";
+import { Add, Book, Colorfilter, Instagram, PenTool } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
 import { CardsData } from "../../utils/cards";
@@ -55,7 +55,7 @@ export default function Home() {
         </Link>
 
         <div className="flex flex-col items-start w-full gap-2">
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row items-start w-full gap-2">
             <p>Experimente alguns perfis: </p>
 
             {CardsData.map((item) => (
@@ -69,12 +69,23 @@ export default function Home() {
             ))}
           </div>
 
-          <input
-            type="text"
-            placeholder="“ Como utilizar o GPT Helpper? =) ”"
-            className="flex w-full bg-white rounded-lg p-3 text-dark"
-          />
+          <label className="flex flex-row items-center justify-center lg:w-[90%] 2xl:w-full bg-white rounded-lg p-3 text-dark">
+            <Add size="24" />
+            <input
+              type="text"
+              placeholder="“ Como utilizar o GPT Helpper? =) ”"
+              className="flex w-full text-gray"
+            />
+          </label>
         </div>
+      </div>
+
+      <div className="flex absolute bottom-0 right-0">
+        <button className="rounded-t-xl rounded-bl-xl border-gray border bg-white px-3 py-2 text-dark h-fit text-xs font-semibold">
+          Fezer toor
+        </button>
+
+        <Image src={"/robot/tip.png"} alt="Dica" width={60} height={30} />
       </div>
     </TabLayout>
   );

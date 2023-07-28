@@ -47,6 +47,7 @@ export default function Profile() {
               Experimente mudar sua foto, editar seus dados, consultar pontos e
               muito mais!
             </p>
+
             <p className="text-sm text-white-200">Tá esperando o que?</p>
             <Button onClick={() => setFirstTime(!firstTime)}>Vamos lá!</Button>
           </div>

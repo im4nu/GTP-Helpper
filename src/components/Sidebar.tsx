@@ -12,16 +12,12 @@ const previousChat = [
     title: "Paleta de Cores",
   },
   {
-    id: 2,
+    id: 1,
     title: "Nomenclatura de fun...",
   },
   {
-    id: 3,
+    id: 2,
     title: "CRUD em node js",
-  },
-  {
-    id: 4,
-    title: "Petição jurídica,",
   },
 ];
 
