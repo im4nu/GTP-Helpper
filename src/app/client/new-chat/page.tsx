@@ -1,5 +1,6 @@
-import { JobCards } from "@/components/JobCards";
 import StackLayout from "@/layouts/Stack";
+import { CardsData } from "../../../../utils/cards";
+import { ProfessionCard } from "@/components/ProfessionCard";
 
 export default function Jobs() {
   return (
@@ -11,21 +12,14 @@ export default function Jobs() {
         </div>
 
         <div className="flex flex-row flex-wrap justify-around gap-2 h-[calc(100vh-200px)] items-center py-4">
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
-          <JobCards />
+          {CardsData.map((item) => (
+            <ProfessionCard
+              key={item.id}
+              title={item.title}
+              description={item.description}
+              link="/client/new-chat/profession-options"
+            />
+          ))}
         </div>
       </div>
     </StackLayout>

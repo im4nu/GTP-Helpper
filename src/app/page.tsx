@@ -1,5 +1,4 @@
-import Header from "@/components/Header";
-import { JobCards } from "@/components/JobCards";
+import { ProfessionCard } from "@/components/ProfessionCard";
 import TabLayout from "@/layouts/Tab";
 import { Book, Colorfilter, Instagram, PenTool } from "iconsax-react";
 import Image from "next/image";
@@ -32,9 +31,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row items-center justify-evenly w-full">
-          <JobCards />
-          <JobCards />
-          <JobCards />
+          <ProfessionCard />
+          <ProfessionCard />
+          <ProfessionCard />
         </div>
 
         <Link

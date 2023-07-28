@@ -15,7 +15,7 @@ const userData = {
 
 export default function StackLayout({ children }: StackLayoutProps) {
   return (
-    <main className="flex min-h-screen min-w-screen flex-col items-center justify-start lg:px-[5vw] xl:px-[10vw] 2xl:px-[15vw]">
+    <main className="flex min-h-screen h-full w-screen flex-col items-center justify-start lg:px-[5vw] xl:px-[10vw] 2xl:px-[15vw]">
       <div className="flex w-full justify-between items-center">
         <Link
           href={"/"}
