@@ -5,7 +5,7 @@ import { ProfessionCard } from "@/components/ProfessionCard";
 export default function Jobs() {
   return (
     <StackLayout routeName="Profissões" titleScreen="Profissões">
-      <div className="flex flex-row flex-wrap justify-around gap-2 h-[calc(100vh-200px)] items-center py-4">
+      <div className="flex flex-row flex-wrap justify-start gap-2 h-[calc(100vh-200px)] items-start py-4">
         {CardsData.map((item) => (
           <ProfessionCard
             key={item.id}

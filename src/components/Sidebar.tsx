@@ -23,7 +23,7 @@ const previousChat = [
 
 export default function Sidebar({ title }: SidebarProps) {
   return (
-    <div className="flex flex-col min-h-screen w-[260px] bg-[#0E131F] items-start pl-[20px] py-8 text-white gap-8">
+    <div className="flex flex-col min-h-screen w-[260px] bg-[#0E131F] items-start pl-[20px] py-8 text-white gap-8 justify-evenly">
       <h5 className="text-3xl">Início</h5>
 
       <div className="flex flex-col gap-4">

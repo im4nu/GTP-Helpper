@@ -14,7 +14,8 @@ export default function TabLayout({ children }: TabLayoutProps) {
 
       <div className="flex flex-col w-[calc(100vw-260px)] h-screen lg:px-[2.5vw] xl:px-[5vw] 2xl:px-[10vw]">
         <Header />
-        {children}
+
+        <div className="flex min-h-[calc(100vh-90px)]">{children}</div>
       </div>
 
       <ModalTour />

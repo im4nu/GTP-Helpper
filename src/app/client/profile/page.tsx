@@ -107,7 +107,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="flex w-full items-center justify-between">
+          <div className="flex w-full items-center justify-end gap-8">
             <Link href={"#"} className="flex flex-row items-center gap-2">
               <Image
                 alt="Imagem de de ajuda"
@@ -120,7 +120,7 @@ export default function Profile() {
 
             <Link
               href={"/auth/login"}
-              className="flex flex-row-reverse items-center gap-2"
+              className="flex flex-row items-center gap-2"
             >
               <LogoutCurve size="32" />
               <p className="text-xs underline">Sair da sua conta</p>

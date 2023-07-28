@@ -1,15 +1,12 @@
-"use client";
-
 import { ProfessionCard } from "@/components/ProfessionCard";
 import TabLayout from "@/layouts/Tab";
-import { Add } from "iconsax-react";
+import { Add, Send2 } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
 import { CardsData } from "../../utils/cards";
-import { useTourStep } from "@/contexts/TourStepContext";
+import TourTip from "@/components/tour/Tip";
 
 export default function Home() {
-  const { setTourStep: setTourStep } = useTourStep();
   return (
     <TabLayout>
       <div className="flex flex-col w-full h-full items-center justify-evenly">
@@ -21,7 +18,7 @@ export default function Home() {
             height={178}
           />
 
-          <h1>Seja bem vindo(a) ao GPT Helpper!</h1>
+          <h1 className="text-xl">Seja bem vindo(a) ao GPT Helpper!</h1>
 
           <h2 className="text-xs text-white-200">
             Basta digitar o que precisa e pronto! Nossos comandos inteligentes
@@ -73,27 +70,21 @@ export default function Home() {
             ))}
           </div>
 
-          <label className="flex flex-row items-center justify-center lg:w-[90%] 2xl:w-full bg-white rounded-lg p-3 text-dark">
+          <label className="flex flex-row items-center justify-center w-[80%] lg:w-[85%] xl:w-[90%] 2xl:w-full bg-white rounded-lg p-3 text-dark gap-2">
             <Add size="24" />
             <input
               type="text"
-              placeholder="“ Como utilizar o GPT Helpper? =) ”"
-              className="flex w-full text-gray"
+              placeholder="Como utilizar o GPT Helpper? =)"
+              className="flex w-full text-gray text-sm"
             />
+            <button>
+              <Send2 size="24" color="#602CA1" />
+            </button>
           </label>
         </div>
       </div>
 
-      <div className="flex absolute bottom-0 right-0">
-        <button
-          onClick={() => setTourStep(0)}
-          className="rounded-t-xl rounded-bl-xl border-gray border bg-white px-3 py-2 text-dark h-fit text-xs font-semibold"
-        >
-          Fezer tour
-        </button>
-
-        <Image src={"/robot/tip.png"} alt="Dica" width={60} height={30} />
-      </div>
+      <TourTip />
     </TabLayout>
   );
 }
