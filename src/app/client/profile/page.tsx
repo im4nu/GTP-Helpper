@@ -114,7 +114,7 @@ export default function Profile() {
             >
               <Image
                 alt="Imagem de de ajuda"
-                src={"/avatars/confuzed.png"}
+                src={"/avatars/confused.png"}
                 width={50}
                 height={50}
               />

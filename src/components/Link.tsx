@@ -56,6 +56,7 @@ const link = cva("link", {
         "ease-in-out",
         "duration-300",
       ],
+      none: [],
     },
     size: {
       small: ["text-xs"],

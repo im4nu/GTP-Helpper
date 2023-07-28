@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CardsData } from "../../utils/cards";
 import TourTip from "@/components/tour/Tip";
+import InputChat from "@/components/chat/Input";
 
 export default function Home() {
   return (
@@ -70,17 +71,7 @@ export default function Home() {
             ))}
           </div>
 
-          <label className="flex flex-row items-center justify-center w-[80%] lg:w-[85%] xl:w-[90%] 2xl:w-full bg-white rounded-lg p-3 text-dark gap-2">
-            <Add size="24" />
-            <input
-              type="text"
-              placeholder="Como utilizar o GPT Helpper? =)"
-              className="flex w-full text-gray text-sm"
-            />
-            <button>
-              <Send2 size="24" color="#602CA1" />
-            </button>
-          </label>
+          <InputChat />
         </div>
       </div>
 
