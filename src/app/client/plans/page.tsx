@@ -14,7 +14,7 @@ export default function Plans() {
           price={plansData[0].price}
         />
 
-        <div className="flex flex-col items-center justify-between w-xs h-[650px] text-dark rounded-xl bg-white border-2 border-main -mx-12 z-20">
+        <div className="flex flex-col items-center justify-between w-xs h-[650px] text-dark rounded-xl bg-white border-2 border-main -mx-6 z-20">
           <div className="flex items-center justify-center gradient-btn rounded-b-lg text-white px-12 py-3">
             <p className="font-medium">Recomendado</p>
           </div>

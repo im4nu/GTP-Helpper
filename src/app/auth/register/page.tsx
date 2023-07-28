@@ -17,12 +17,15 @@ export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="flex w-screen min-h-screen justify-center items-center">
-      <div className="flex flex-col py-8 px-24 bg-white rounded-xl items-center justify-center gap-8 text-dark">
-        <Image src={"/img/gpt-logo.png"} width={120} height={120} alt="logo" />
+      <form className="flex flex-col py-8 px-24 bg-white rounded-xl items-center justify-center gap-8 text-dark">
+        <Image src={"/avatars/happy.png"} width={120} height={120} alt="logo" />
 
-        <h1 className="text-xl font-medium">Cadastro</h1>
+        <div className="flex flex-col text-center">
+          <h1 className="text-xl font-medium">GPT Helper</h1>
+          <p className="text-sm font-white-200">Cadastre-se</p>
+        </div>
 
-        <button className="flex flex-row items-center gap-2 p-3 rounded-lg gradient-btn-rainbow">
+        {/* <button className="flex flex-row items-center gap-2 p-3 rounded-lg gradient-btn-rainbow">
           <Image
             src={"/img/googleLogo.png"}
             width={24}
@@ -30,7 +33,7 @@ export default function Register() {
             alt="logo do google"
           />
           Entrar com google
-        </button>
+        </button> */}
 
         <Input
           inputType="name"
@@ -46,10 +49,13 @@ export default function Register() {
 
         <Input
           inputType={showPassword ? "text" : "password"}
-          placeholder="meuemail@gmail.com"
+          placeholder="********"
           startDecoration={<PasswordCheck size="24" />}
           endDecoration={
-            <button onClick={() => setShowPassword(!showPassword)}>
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+            >
               {showPassword ? <Eye size="24" /> : <EyeSlash size="24" />}
             </button>
           }
@@ -60,7 +66,10 @@ export default function Register() {
           placeholder="Confirme sua senha"
           startDecoration={<PasswordCheck size="24" />}
           endDecoration={
-            <button onClick={() => setShowPassword(!showPassword)}>
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+            >
               {showPassword ? <Eye size="24" /> : <EyeSlash size="24" />}
             </button>
           }
@@ -69,7 +78,7 @@ export default function Register() {
         <Button className="text-white" size={"large"}>
           Cadastrar
         </Button>
-      </div>
+      </form>
 
       <AuthDialog
         title={

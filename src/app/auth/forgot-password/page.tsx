@@ -19,16 +19,17 @@ export default function ForgotPassword() {
       <div className="flex justify-center items-center min-h-[calc(100vh-150px)] w-full">
         <div className="flex flex-col py-8 px-24 bg-white rounded-xl items-center justify-center gap-8 text-dark">
           <Image
-            src={"/img/gpt-logo.png"}
+            src={"/avatars/happy.png"}
             width={120}
             height={120}
             alt="logo"
           />
 
           <h1 className="text-xl font-medium">Esqueceu sua senha?</h1>
+
           <div className="flex text-sm flex-col items-start gap-1">
             <p>
-              Relaxa...😌 Recupere-a em{" "}
+              Recupere-a em{" "}
               <span className="font-bold text-main">3 passos simples:</span>
             </p>
             <p>

@@ -14,12 +14,15 @@ export default function Login() {
   const router = useRouter();
   return (
     <div className="flex w-screen min-h-screen justify-center items-center relative">
-      <div className="flex flex-col py-8 px-24 bg-white rounded-xl items-center justify-center gap-8 text-dark">
-        <Image src={"/img/gpt-logo.png"} width={120} height={120} alt="logo" />
+      <form className="flex flex-col py-8 px-24 bg-white rounded-xl items-center justify-center gap-8 text-dark">
+        <Image src={"/avatars/happy.png"} width={120} height={120} alt="logo" />
 
-        <h1 className="text-xl font-medium">Login</h1>
+        <div className="flex flex-col text-center">
+          <h1 className="text-xl font-medium">GPT Helper</h1>
+          <p className="text-sm font-white-200">Seja bem vindo, faça login</p>
+        </div>
 
-        <button className="flex flex-row items-center gap-2 p-3 rounded-lg gradient-btn-rainbow">
+        {/* <button className="flex flex-row items-center gap-2 p-3 rounded-lg gradient-btn-rainbow">
           <Image
             src={"/img/googleLogo.png"}
             width={24}
@@ -27,7 +30,7 @@ export default function Login() {
             alt="logo do google"
           />
           Entrar com google
-        </button>
+        </button> */}
 
         <Input
           inputType="email"
@@ -62,7 +65,7 @@ export default function Login() {
         >
           Entrar
         </Button>
-      </div>
+      </form>
 
       <AuthDialog
         title={
