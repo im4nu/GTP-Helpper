@@ -31,19 +31,19 @@ export default function Sidebar({ title }: SidebarProps) {
       <h5 className="text-3xl">Início</h5>
 
       <div className="flex flex-col gap-4">
-        <p>Iniciar novo chat</p>
+        <p className="text-sm">Iniciar novo chat</p>
         <Link href={"/client/new-chat"}>
           <Add size="25" />
           Novo chat
         </Link>
 
-        <p>Histórico de chat</p>
+        <p className="text-sm">Histórico de chat</p>
         <Link href={"/"}>
           <Clock size="25" />
           Histórico
         </Link>
 
-        <p>Planos de assinatura</p>
+        <p className="text-sm">Planos de assinatura</p>
         <Link href={"/"}>
           <Box size="25" />
           Planos
@@ -51,7 +51,7 @@ export default function Sidebar({ title }: SidebarProps) {
       </div>
 
       <div className="flex flex-col items-start gap-4">
-        <p>Chats anteriores</p>
+        <p className="text-sm">Chats anteriores</p>
 
         {previousChat.map((item) => (
           <div

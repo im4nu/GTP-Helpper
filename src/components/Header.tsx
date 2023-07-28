@@ -4,6 +4,10 @@ import Link from "next/link";
 import { userData } from "../../utils/user";
 
 export default function Header() {
+  const fullName = userData.name.trim();
+  const namesArray = fullName.split(" ");
+  const firstName = namesArray[0];
+  const lastName = namesArray[namesArray.length - 1];
   return (
     <div className="flex w-full justify-end items-end">
       <Link
@@ -11,7 +15,9 @@ export default function Header() {
         className="flex flex-row w-fit gap-4 items-center p-4"
       >
         <div className="flex flex-col gap-1">
-          <p className="font-bold">{userData.name}</p>
+          <p className="font-bold">
+            {firstName} {lastName}
+          </p>
 
           <div className="flex w-full items-center text-xs gap-2">
             <SmsNotification size="12" />

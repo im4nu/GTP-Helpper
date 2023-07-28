@@ -3,6 +3,7 @@ import TabLayout from "@/layouts/Tab";
 import { Book, Colorfilter, Instagram, PenTool } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
+import { CardsData } from "../../utils/cards";
 
 export default function Home() {
   return (
@@ -31,9 +32,19 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row items-center justify-evenly w-full">
-          <ProfessionCard />
-          <ProfessionCard />
-          <ProfessionCard />
+          {CardsData.map((item) => (
+            <>
+              {item.id <= 2 && (
+                <ProfessionCard
+                  key={item.id}
+                  title={item.title}
+                  description={item.description}
+                  icon={item.icon}
+                  link="/client/new-chat/profession-options"
+                />
+              )}
+            </>
+          ))}
         </div>
 
         <Link
@@ -44,12 +55,18 @@ export default function Home() {
         </Link>
 
         <div className="flex flex-col items-start w-full gap-2">
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row items-center gap-2">
             <p>Experimente alguns perfis: </p>
-            <Colorfilter size="18" color="#FF8A65" />
-            <Book size="18" color="#FF8A65" />
-            <PenTool size="18" color="#FF8A65" />
-            <Instagram size="18" color="#FF8A65" />
+
+            {CardsData.map((item) => (
+              <Link
+                key={item.id}
+                href={"/client/new-chat/profession-options"}
+                className="scale-90 gap-3"
+              >
+                {item.icon}
+              </Link>
+            ))}
           </div>
 
           <input

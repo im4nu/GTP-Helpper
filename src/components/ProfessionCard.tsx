@@ -16,7 +16,7 @@ export function ProfessionCard({
 }: ProfessionProps) {
   return (
     <Link
-      href={link ?? "/client/new-chat/profession"}
+      href={link ?? "/client/new-chat"}
       className="flex flex-col items-center justify-center w-full h-fit gap-2 max-w-[250px] hover:opacity-80 duration-300 ease-in-out"
     >
       <div className="flex flex-row w-full items-center gap-2">

@@ -17,6 +17,7 @@ export default function Jobs() {
               key={item.id}
               title={item.title}
               description={item.description}
+              icon={item.icon}
               link="/client/new-chat/profession-options"
             />
           ))}

@@ -1,6 +1,6 @@
 export const userData = {
   id: 0,
-  name: "Emmanuel Rodrigues",
+  name: "Emmanuel Victor Rodrigues",
   email: "meuemail@gmail.com",
   image: "/avatars/man-in-purple.png",
   plan: "Premium",
