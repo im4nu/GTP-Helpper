@@ -61,6 +61,7 @@ const link = cva("link", {
     size: {
       small: ["text-xs"],
       medium: ["text-sm"],
+      large: ["w-full"],
     },
   },
   compoundVariants: [{ variant: "contained", size: "medium" }],

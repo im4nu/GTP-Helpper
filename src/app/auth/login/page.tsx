@@ -1,71 +1,10 @@
-"use client";
-
-import { Button } from "@/components/Button";
 import { AuthDialog } from "@/components/auth/Dialog";
-import { Input } from "@/components/auth/Input";
-import { Eye, EyeSlash, PasswordCheck, SmsNotification } from "iconsax-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import AuthLoginForm from "@/components/auth/LoginForm";
 
 export default function Login() {
-  const [showPassword, setShowPassword] = useState(false);
-  const router = useRouter();
   return (
     <div className="flex w-screen min-h-screen justify-center items-center relative">
-      <form className="flex flex-col py-8 px-24 bg-white rounded-xl items-center justify-center gap-8 text-dark">
-        <Image src={"/avatars/happy.png"} width={120} height={120} alt="logo" />
-
-        <div className="flex flex-col text-center">
-          <h1 className="text-xl font-medium">GPT Helper</h1>
-          <p className="text-sm font-white-200">Seja bem vindo, faça login</p>
-        </div>
-
-        {/* <button className="flex flex-row items-center gap-2 p-3 rounded-lg gradient-btn-rainbow">
-          <Image
-            src={"/img/googleLogo.png"}
-            width={24}
-            height={24}
-            alt="logo do google"
-          />
-          Entrar com google
-        </button> */}
-
-        <Input
-          inputType="email"
-          placeholder="meuemail@gmail.com"
-          startDecoration={<SmsNotification size="24" />}
-        />
-
-        <Input
-          inputType={showPassword ? "text" : "password"}
-          placeholder="meuemail@gmail.com"
-          startDecoration={<PasswordCheck size="24" />}
-          endDecoration={
-            <button onClick={() => setShowPassword(!showPassword)}>
-              {showPassword ? <Eye size="24" /> : <EyeSlash size="24" />}
-            </button>
-          }
-        />
-
-        <div className="flex w-full justify-end">
-          <Link
-            href={"/auth/forgot-password"}
-            className="text-main text-xs underline"
-          >
-            Esqueceu sua senha?
-          </Link>
-        </div>
-
-        <Button
-          className="text-white"
-          size={"large"}
-          onClick={() => router.push("/")}
-        >
-          Entrar
-        </Button>
-      </form>
+      <AuthLoginForm />
 
       <AuthDialog
         title={
