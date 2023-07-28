@@ -56,6 +56,7 @@ const button = cva("rounded-xl font-semibold", {
     size: {
       small: ["text-xs"],
       medium: ["text-sm"],
+      large: ["w-full"],
     },
   },
   defaultVariants: {
