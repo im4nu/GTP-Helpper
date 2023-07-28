@@ -108,7 +108,10 @@ export default function Profile() {
           </div>
 
           <div className="flex w-full items-center justify-end gap-8">
-            <Link href={"#"} className="flex flex-row items-center gap-2">
+            <Link
+              href={"#"}
+              className="flex flex-row items-center gap-2 hover:opacity-60 ease-in-out duration-300"
+            >
               <Image
                 alt="Imagem de de ajuda"
                 src={"/avatars/confuzed.png"}
@@ -120,7 +123,7 @@ export default function Profile() {
 
             <Link
               href={"/auth/login"}
-              className="flex flex-row items-center gap-2"
+              className="flex flex-row items-center gap-2 hover:opacity-60 ease-in-out duration-300"
             >
               <LogoutCurve size="32" />
               <p className="text-xs underline">Sair da sua conta</p>
