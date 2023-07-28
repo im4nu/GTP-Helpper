@@ -1,3 +1,4 @@
+import { TourStepProvider } from "@/contexts/TourStepContext";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -18,7 +19,7 @@ export default function RootLayout({
       <body
         className={`bg-dark bg-circles bg-no-repeat bg-cover text-white ${inter.className}`}
       >
-        {children}
+        <TourStepProvider>{children}</TourStepProvider>
       </body>
     </html>
   );

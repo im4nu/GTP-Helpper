@@ -1,11 +1,15 @@
+"use client";
+
 import { ProfessionCard } from "@/components/ProfessionCard";
 import TabLayout from "@/layouts/Tab";
-import { Add, Book, Colorfilter, Instagram, PenTool } from "iconsax-react";
+import { Add } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
 import { CardsData } from "../../utils/cards";
+import { useTourStep } from "@/contexts/TourStepContext";
 
 export default function Home() {
+  const { setTourStep: setTourStep } = useTourStep();
   return (
     <TabLayout>
       <div className="flex flex-col w-full h-full items-center justify-evenly">
@@ -81,8 +85,11 @@ export default function Home() {
       </div>
 
       <div className="flex absolute bottom-0 right-0">
-        <button className="rounded-t-xl rounded-bl-xl border-gray border bg-white px-3 py-2 text-dark h-fit text-xs font-semibold">
-          Fezer toor
+        <button
+          onClick={() => setTourStep(0)}
+          className="rounded-t-xl rounded-bl-xl border-gray border bg-white px-3 py-2 text-dark h-fit text-xs font-semibold"
+        >
+          Fezer tour
         </button>
 
         <Image src={"/robot/tip.png"} alt="Dica" width={60} height={30} />

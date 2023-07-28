@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
-import { ModalToor } from "@/components/toor/Modal";
+import { ModalTour } from "@/components/tour/Modal";
 import { ReactNode } from "react";
 
 interface TabLayoutProps {
@@ -17,7 +17,7 @@ export default function TabLayout({ children }: TabLayoutProps) {
         {children}
       </div>
 
-      <ModalToor />
+      <ModalTour />
     </main>
   );
 }
