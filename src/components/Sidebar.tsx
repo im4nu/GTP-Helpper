@@ -44,7 +44,7 @@ export default function Sidebar({ title }: SidebarProps) {
         </Link>
 
         <p className="text-sm">Planos de assinatura</p>
-        <Link href={"/"}>
+        <Link href={"/client/plans"}>
           <Box size="25" />
           Planos
         </Link>

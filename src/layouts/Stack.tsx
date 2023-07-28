@@ -5,6 +5,8 @@ import { ReactNode } from "react";
 
 interface StackLayoutProps {
   children: ReactNode;
+  routeName?: string;
+  titleScreen?: string;
 }
 
 const userData = {
@@ -13,7 +15,11 @@ const userData = {
   image: "/avatars/man-in-purple.png",
 };
 
-export default function StackLayout({ children }: StackLayoutProps) {
+export default function StackLayout({
+  children,
+  routeName,
+  titleScreen,
+}: StackLayoutProps) {
   return (
     <main className="flex min-h-screen h-full w-screen flex-col items-center justify-start lg:px-[5vw] xl:px-[10vw] 2xl:px-[15vw]">
       <div className="flex w-full justify-between items-center">
@@ -46,8 +52,18 @@ export default function StackLayout({ children }: StackLayoutProps) {
           />
         </Link>
       </div>
+      <div className="flex flex-col items-center w-full justify-center h-full">
+        <div className="flex flex-col items-start w-full mt-4">
+          <p className="text-xs text-white-200">
+            Início {">"} {routeName ?? "Sem nome definido para esta rota"}
+          </p>
+          <h1 className="text-2xl">
+            {titleScreen ?? "Esta tela ainda não tem um título definido"}
+          </h1>
+        </div>
 
-      {children}
+        {children}
+      </div>
     </main>
   );
 }
