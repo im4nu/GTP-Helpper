@@ -18,6 +18,10 @@ body {
   overflow-x: hidden;
 }
 
+input:focus {
+  outline: none;
+}
+
 .gradient-btn{
   background: linear-gradient(180deg, #602DA2 0%, #6376A4 100%);
 }
@@ -32,17 +36,12 @@ body {
 }
 
 .gradient-btn-rainbow {
-  border: 1px solid; /* Remova a borda sólida anterior para evitar conflitos */
+  border: 1px solid;
   padding: 10px 20px;
   font-size: 16px;
-
-  /* Adicione o gradiente diretamente ao background do botão */
   border-image: linear-gradient(180deg, #F23636 0%, #E1C845 25%, #36F254 50%, #3698F2 100%);
   border-image-slice: 1;
-  border-radius: 30px; /* Aumente ou diminua o valor para ajustar o grau de arredondamento */
 }
-
-
 
 .stroke-shadow{
   stroke-width: 3px;
