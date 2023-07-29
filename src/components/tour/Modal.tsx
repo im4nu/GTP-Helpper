@@ -65,8 +65,8 @@ export function ModalTour() {
       {tourStep <= 2 && (
         <div
           className={`flex bg-white rounded-xl flex-col absolute text-dark w-[430px] min-h-[220px] h-fi p-4 ${
-            tourStep === 0 ? "right-12 bottom-[25vh]" : ""
-          } ${tourStep === 1 ? "left-12 top-[20vh]" : ""} ${
+            tourStep === 0 ? "right-12 bottom-[15vh]" : ""
+          } ${tourStep === 1 ? "left-12 top-[25vh]" : ""} ${
             tourStep === 2 ? "left-[40vw] top-[35vh]" : ""
           }`}
         >
