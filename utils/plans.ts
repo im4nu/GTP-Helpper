@@ -2,7 +2,7 @@ export const plansData = [
   {
     id: 0,
     title: 'Básico',
-    price: 'R$ 27,99',
+    price: 'R$ 7,99',
     benefits: [
       { id: 0, description: '500 créditos' },
       { id: 1, description: '1 usuário' },
@@ -15,7 +15,7 @@ export const plansData = [
   {
     id: 1,
     title: "Intermediário",
-    price: "R$ 49,99",
+    price: "R$ 11,99",
     benefits: [
       { id: 0, description: "1000 créditos" },
       { id: 1, description: "2 usuários" },
@@ -29,7 +29,7 @@ export const plansData = [
   {
     id: 2,
     title: "Premium",
-    price: "R$ 99,99",
+    price: "R$ 59,99",
     benefits: [
       { id: 0, description: "Créditos ilimitados" },
       { id: 1, description: "5 usuários" },
